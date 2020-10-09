@@ -73,16 +73,17 @@ function deletePhotoField(event) {
   span.parentNode.remove()
 }
 
-// Select yes or no
+// Select yes or no 
 
 function toggleSelect(event) {
   
-  document.querySelector('.button-selected button').forEach(button => button.classList.remove('active'))
+  document.querySelectorAll('.button-selected button')
+  .forEach(button => button.classList.remove('active'))
   
   const button = event.currentTarget
   button.classList.add('active')
   
-  const input = document.querySelector('[name=open_on_weekends]')
-  
+  const input = document.querySelector('[name="open_on_weekends"]')
+  // console.log(input.value)
   input.value = button.dataset.value
 }

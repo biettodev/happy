@@ -22,9 +22,11 @@ module.exports = {
 			
 			if(orphanage.open_on_weekends == "0"){
 				orphanage.open_on_weekends = false
+				console.log('Não atende')
 			}
 			else{
 				orphanage.open_on_weekends = true
+				console.log('Atende')
 			}
 			
 			console.log(orphanage)
@@ -55,7 +57,7 @@ module.exports = {
 	async saveOrphanage(req, res){
 		const fields = req.body
 		
-		if(Object.values(fields).includes('')){
+		if(Object.values(fields).includes("")){
 			return res.send('Todos os campos são obrigatórios!')
 		}
 		
