@@ -1,16 +1,19 @@
 const options = {
-  draggin: false,
+  dragging: false,
   touchZoom: false,
   doubleClickZoom: false,
   scrollWheelZoom: false,
   zoomControl: false
 }
 
+const lat = document.querySelector('span[data-lat]').dataset.lat
+const lng = document.querySelector('span[data-lng]').dataset.lng
+
 // Create Map
 
 var map = L
   .map('mapid', options)
-  .setView([-23.5489, -46.6388], 13)
+  .setView([lat, lng], 13)
 
 // Create Tile
 
@@ -29,7 +32,7 @@ const icon = L.icon({
 // Create and add Marker
 
 L
-  .marker([-23.5489, -46.6388], { icon })
+  .marker([lat, lng], { icon })
   .addTo(map)
 
 // Image gallery

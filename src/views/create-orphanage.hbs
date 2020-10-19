@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/buttons.css">
   <link rel="stylesheet" href="/css/map.css">
-  <link rel="stylesheet" href="/css/.css">
+  <!-- <link rel="stylesheet" href="/css/.css"> -->
   <link rel="stylesheet" href="/css/sidebar.css">
   <link rel="stylesheet" href="/css/page-create-orphanage.css">
   <link rel="stylesheet" href="/css/animations.css">
@@ -31,7 +31,7 @@
       </footer>
     </aside>
     <main class="animate-appear with-sidebar">
-      <form action="" method="get" accept-charset="utf-8">
+      <form action="save-orphanage" method="post" accept-charset="utf-8">
         <fieldset>
           <legend>Dados</legend>
           <div class="map-container">
@@ -61,7 +61,7 @@
             
             <div class="images-upload" id="images">
               <div class="new-upload">
-                <input name="images" placeholder="Cole o link da foto aqui" required/>
+                <input type="url" name="images" placeholder="Cole o link da foto aqui" required/>
                 <span onclick="deletePhotoField(event)">
                   <img src="/images/remove-file.svg" alt="Remover foto" />
                 </span>

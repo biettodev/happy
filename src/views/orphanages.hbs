@@ -29,21 +29,25 @@
 		<p>São Paulo</p>
 	  </footer>
     </aside>
-    <div id="mapid" class="animate-appear"></div>
-		
-	<div class="orphanages">
-		{{#each orphanages}}
+    <div id="mapid" class="animate-appear">
 	
-			<span 
-				hidden 
-				data-id="{{this.id}}"
-				data-name="{{this.name}}"
-				data-lat="{{this.lat}}"
-				data-lng="{{this.lng}}"
-			></span>
+		<div class="orphanages">
+			{{#each orphanages}}
 		
-		{{/each}}
-	</div>	
+				<span 
+					hidden 
+					data-id="{{this.id}}"
+					data-name="{{this.name}}"
+					data-lat="{{this.lat}}"
+					data-lng="{{this.lng}}"
+				></span>
+			
+			{{/each}}
+		</div>
+		
+	</div>
+		
+		
 	
     <a class="create-orphanage" href="/create-orphanage" title="Cadastre um orfanato">
       <img src="/images/plus.svg" alt="Adicionar orfanato" />

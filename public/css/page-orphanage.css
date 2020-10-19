@@ -140,13 +140,15 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
+  
+  line-height: 1.5;
 }
 
 .open-details div {
   padding: 3.4rem 2.4rem;
 }
 
-.orphanage-details img {
+.open-details img {
   display: block;
   margin-bottom: 2rem;
 }
@@ -161,10 +163,17 @@ main {
 }
 
 .open-details .open-on-weekends {
-  background: linear-gradient(159.47deg, #edfff6 7%, #ffffff 91%);
+	border-radius: 2rem;
+}
 
-  border: 1px solid #a1e9c5;
-  border-radius: 2rem;
+.open-on-weekends.open{
+	background: linear-gradient(159.47deg, #edfff6 7%, #ffffff 91%);
+	border: 1px solid #a1e9c5;
+	color: #37c77f;
+}
 
-  color: #37c77f;
+.open-on-weekends.closed{
+	background: linear-gradient(159.47deg, #fcf0f4 7%, #ffffff 91%);
+	border: 1px solid #ffbcd4;
+	color: #ff999d;
 }
